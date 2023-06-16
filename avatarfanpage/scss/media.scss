@@ -1,0 +1,822 @@
+@media (min-width: 320px) and (max-width: 425px) {
+  .contents,
+  .series,
+  .comics,
+  .creators {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+
+  .contents {
+    height: 400vh;
+    &__nav {
+      @include d-flex(center, center, column);
+    }
+    &__nav-link {
+      padding: $padding-s;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__logo-wrapper {
+      text-align: center;
+      margin-top: $margin-s;
+    }
+
+    &__logo {
+      width: 60%;
+      height: auto;
+    }
+    &__news-wrapper {
+      @include d-flex(space-between, center, column);
+      margin: $padding-s;
+    }
+    &__news-title {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+
+    .seeall {
+      border-width: 0;
+      margin-right: 0;
+    }
+
+    .newscard__wrapper {
+      @include d-flex(space-evenly, center, column);
+    }
+    .newscard {
+      width: 80%;
+      height: auto;
+      margin: 25px;
+    }
+
+    .newscard__title,
+    .newscard__description {
+      text-align: justify;
+      padding: $padding-xs;
+      color: $third-text-color;
+    }
+  }
+  .series {
+    height: 200vh;
+    background-image: url(./public/images/desktop/bg2.png);
+    @include d-flex(space-evenly, center, column);
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__description-wrapper {
+      width: 80%;
+      height: auto;
+    }
+
+    &__button {
+      margin-right: 0;
+      font-size: $fs-s;
+    }
+    &__button:hover {
+      background-color: $third-text-color;
+      transition-duration: 300ms;
+      transform: scale(1.1);
+    }
+  }
+
+  .comics {
+    height: 510vh;
+    background-image: url(./public/images/desktop/bg3.jpg);
+    &__title-wrapper {
+    }
+
+    &__title {
+      font-size: $fs-l;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+
+    &__about {
+      width: 80%;
+      height: auto;
+    }
+
+    &__table {
+      margin-top: $margin-l;
+      @include grid-sys(2, 1);
+      height: auto;
+      width: 70%;
+    }
+    &__cover {
+      width: auto;
+    }
+  }
+
+  .creators {
+    height: 220vh;
+    background-image: url(./public/images/desktop/bg4.jpg);
+    &__title-wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__card {
+      width: 100%;
+      margin-top: $margin-m;
+      height: auto;
+      padding: 0;
+    }
+    &__card-title {
+      text-align: center;
+      margin-top: 5px;
+      background: none;
+    }
+
+    &__description {
+      width: 100%;
+      text-align: justify;
+    }
+  }
+
+  .footer {
+    height: 100vh;
+    &__wrapper {
+      margin-top: 0;
+    }
+    &__box {
+      @include d-flex(center, center, column);
+    }
+    &__title {
+      margin-right: 0;
+    }
+    &__input-wrapper {
+      text-align: center;
+    }
+    &__input {
+      width: 70%;
+      height: 3rem;
+      border-bottom-width: 4px;
+      outline: 0;
+      border-width: 0 0 2px;
+    }
+
+    &__input:focus {
+      border-color: green;
+      outline: 1px dotted #000;
+    }
+
+    &__info-wrapper {
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    &__info {
+      margin-left: 10px;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: $fs-s;
+    }
+
+    &__nav {
+      @include d-flex(center, center, column);
+    }
+    &__nav-link {
+      padding: $padding-xs;
+      font-size: $fs-s;
+    }
+    &__messenger {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .messenger {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contents,
+  .series,
+  .comics,
+  .creators {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .contents {
+    height: 400vh;
+    &__nav {
+      @include d-flex(center, center, column);
+    }
+    &__nav-link {
+      padding: $padding-s;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__logo-wrapper {
+      text-align: center;
+      margin-top: $margin-s;
+    }
+
+    &__logo {
+      width: 60%;
+      height: auto;
+    }
+    &__news-wrapper {
+      @include d-flex(space-between, center, column);
+      margin: $padding-s;
+    }
+    &__news-title {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+
+    .seeall {
+      border-width: 0;
+      margin-right: 0;
+    }
+
+    .newscard__wrapper {
+      @include d-flex(space-evenly, center, column);
+    }
+    .newscard {
+      width: 80%;
+      height: auto;
+      margin: 25px;
+    }
+
+    .newscard__title,
+    .newscard__description {
+      text-align: justify;
+      padding: $padding-xs;
+      color: $third-text-color;
+    }
+  }
+  .series {
+    height: 160vh;
+    background-image: url(./public/images/desktop/bg2.png);
+    @include d-flex(space-evenly, center, column);
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__description-wrapper {
+      width: 80%;
+      height: auto;
+    }
+
+    &__button {
+      margin-right: 0;
+      font-size: $fs-m;
+    }
+    &__button:hover {
+      background-color: $third-text-color;
+      transition-duration: 300ms;
+      transform: scale(1.1);
+    }
+  }
+
+  .comics {
+    height: 340vh;
+    background-image: url(./public/images/desktop/bg3.jpg);
+    &__title-wrapper {
+    }
+
+    &__title {
+      font-size: $fs-l;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+
+    &__about {
+      width: 80%;
+      height: auto;
+    }
+
+    &__table {
+      margin-top: 40px;
+      @include grid-sys(2, 2);
+      height: auto;
+      width: 90%;
+    }
+    &__cover {
+      width: auto;
+    }
+  }
+
+  .creators {
+    height: 220vh;
+    background-image: url(./public/images/desktop/bg4.jpg);
+    &__title-wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__card {
+      width: 80%;
+      margin-top: $margin-m;
+      height: auto;
+      padding: 0;
+    }
+    &__card-title {
+      text-align: center;
+      margin-top: 5px;
+      background: none;
+    }
+
+    &__description {
+      width: 100%;
+      text-align: justify;
+    }
+  }
+
+  .footer {
+    height: 120vh;
+    &__wrapper {
+      margin-top: 0;
+    }
+    &__box {
+      @include d-flex(center, center, column);
+    }
+    &__title {
+      margin-right: 0;
+    }
+    &__input-wrapper {
+      text-align: center;
+    }
+    &__input {
+      width: 70%;
+      height: 3rem;
+      border-bottom-width: 4px;
+      outline: 0;
+      border-width: 0 0 2px;
+    }
+
+    &__input:focus {
+      border-color: green;
+      outline: 1px dotted #000;
+    }
+
+    &__info-wrapper {
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    &__info {
+      margin-left: 10px;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: $fs-s;
+    }
+
+    &__nav {
+      @include d-flex(center, center, column);
+    }
+    &__nav-link {
+      padding: $padding-xs;
+      font-size: $fs-s;
+    }
+    &__messenger {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .messenger {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contents,
+  .series,
+  .comics,
+  .creators {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .contents {
+    height: 280vh;
+    &__nav {
+      @include d-flex(center, center, row);
+    }
+    &__nav-link {
+      padding: $padding-s;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__logo-wrapper {
+      text-align: center;
+      margin-top: $margin-s;
+    }
+
+    &__logo {
+      width: 60%;
+      height: auto;
+    }
+    &__news-wrapper {
+      @include d-flex(space-between, center, row);
+      margin: $padding-s;
+    }
+    &__news-title {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 200px;
+    }
+
+    .seeall {
+      border-width: 0;
+      margin-right: 0;
+    }
+
+    .newscard__wrapper {
+      @include d-flex(space-evenly, center, column);
+    }
+    .newscard {
+      width: 80%;
+      height: auto;
+      margin: 25px;
+    }
+
+    .newscard__title,
+    .newscard__description {
+      text-align: justify;
+      padding: $padding-xs;
+      color: $third-text-color;
+    }
+  }
+  .series {
+    background-image: url(./public/images/desktop/bg2.png);
+    @include d-flex(space-evenly, center, column);
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__description-wrapper {
+      width: 80%;
+      height: auto;
+    }
+
+    &__button {
+      margin-right: 0;
+      font-size: $fs-s;
+    }
+    &__button:hover {
+      background-color: $third-text-color;
+      transition-duration: 300ms;
+      transform: scale(1.1);
+    }
+  }
+
+  .comics {
+    height: 230vh;
+    background-image: url(./public/images/desktop/bg3.jpg);
+    &__title-wrapper {
+      padding: 30px;
+    }
+
+    &__title {
+      font-size: $fs-xl;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+
+    &__about {
+      width: 80%;
+      height: auto;
+    }
+
+    &__table {
+      margin-top: 40px;
+      @include grid-sys(2, 3);
+      height: auto;
+      width: 90%;
+    }
+    &__cover {
+      width: auto;
+    }
+  }
+
+  .creators {
+    height: 200vh;
+    background-image: url(./public/images/desktop/bg4.jpg);
+    &__title-wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: $fs-xl;
+    }
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__card {
+      width: 80%;
+      margin-top: $margin-m;
+      height: auto;
+      padding: 0;
+    }
+    &__card-title {
+      text-align: center;
+      margin-top: 20px;
+      background: none;
+      font-size: $fs-m;
+    }
+
+    &__description {
+      width: 100%;
+      text-align: justify;
+    }
+  }
+
+  .footer {
+    &__wrapper {
+      margin-top: 0;
+    }
+    &__box {
+      padding: 20px;
+      @include d-flex(center, center, column);
+    }
+    &__title {
+      margin-right: 0;
+    }
+    &__input-wrapper {
+      text-align: center;
+    }
+    &__input {
+      width: 90%;
+      height: 3rem;
+      border-bottom-width: 4px;
+      outline: 0;
+      border-width: 0 0 2px;
+    }
+
+    &__input:focus {
+      border-color: green;
+      outline: 1px dotted #000;
+    }
+
+    &__info-wrapper {
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    &__info {
+      margin-left: 10px;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: $fs-s;
+    }
+
+    &__nav {
+      @include d-flex(center, center, row);
+    }
+    &__nav-link {
+      padding: $padding-xs;
+      font-size: $fs-s;
+    }
+    &__messenger {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .messenger {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .contents,
+  .series,
+  .comics,
+  .creators {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .contents {
+    height: 180vh;
+    &__nav {
+      @include d-flex(center, center, row);
+    }
+    &__nav-link {
+      padding: $padding-s;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+    &__logo-wrapper {
+      text-align: center;
+      margin-top: $margin-s;
+    }
+
+    &__logo {
+      width: 60%;
+      height: auto;
+    }
+    &__news-wrapper {
+      @include d-flex(space-between, center, row);
+      margin: $padding-s;
+    }
+    &__news-title {
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 200px;
+    }
+
+    .seeall {
+      border-width: 0;
+      margin-right: 0;
+    }
+
+    .newscard__wrapper {
+      @include d-flex(space-evenly, center, row);
+    }
+    .newscard {
+      width: 80%;
+      height: auto;
+      margin: 25px;
+    }
+
+    .newscard__title,
+    .newscard__description {
+      text-align: justify;
+      padding: $padding-s;
+      color: $third-text-color;
+    }
+  }
+  .series {
+    background-image: url(./public/images/desktop/bg2.png);
+    @include d-flex(space-evenly, center, column);
+
+    &__title {
+      font-size: $fs-l;
+    }
+    &__description-wrapper {
+      width: 80%;
+      height: auto;
+    }
+
+    &__button {
+      margin-right: 0;
+      font-size: $fs-m;
+    }
+    &__button:hover {
+      background-color: $third-text-color;
+      transition-duration: 300ms;
+      transform: scale(1.1);
+    }
+  }
+
+  .comics {
+    height: 270vh;
+    background-image: url(./public/images/desktop/bg3.jpg);
+    &__title-wrapper {
+      padding: 30px;
+    }
+
+    &__title {
+      font-size: $fs-xl;
+    }
+
+    &__main {
+      @include d-flex(center, center, column);
+    }
+
+    &__about {
+      width: 80%;
+      height: auto;
+    }
+
+    &__table {
+      margin-top: 40px;
+      @include grid-sys(2, 3);
+      height: auto;
+      width: 90%;
+    }
+    &__cover {
+      width: auto;
+    }
+  }
+  .creators {
+    height: 160vh;
+    background-image: url(./public/images/desktop/bg4.jpg);
+    &__title-wrapper {
+      padding: 0;
+    }
+
+    &__main {
+      @include d-flex(space-evenly, center, row);
+    }
+    &__card {
+      width: 40%;
+      margin-top: $margin-m;
+      height: auto;
+    }
+    &__card-title {
+      text-align: center;
+      background: none;
+      font-size: $fs-m;
+    }
+
+    &__description {
+      width: 70%;
+      text-align: justify;
+    }
+  }
+  .footer {
+    &__wrapper {
+      margin-top: 0;
+    }
+    &__box {
+      padding: 20px;
+      @include d-flex(center, center, column);
+    }
+    &__title {
+      margin-right: 0;
+    }
+    &__input-wrapper {
+      text-align: center;
+    }
+    &__input {
+      width: 90%;
+      height: 3rem;
+      border-bottom-width: 4px;
+      outline: 0;
+      border-width: 0 0 2px;
+    }
+
+    &__input:focus {
+      border-color: green;
+      outline: 1px dotted #000;
+    }
+
+    &__info-wrapper {
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    &__info {
+      margin-left: 10px;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      font-size: $fs-s;
+    }
+
+    &__nav {
+      @include d-flex(center, center, row);
+    }
+    &__nav-link {
+      padding: $padding-xs;
+      font-size: $fs-s;
+    }
+    &__messenger {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .messenger {
+      margin-top: 10px;
+      display: flex;
+    }
+  }
+}

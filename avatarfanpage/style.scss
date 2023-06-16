@@ -1,0 +1,419 @@
+@import "./scss/variables.scss";
+@import "./scss/mixings.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#app {
+  font-family: $ff-primary;
+}
+
+.contents,
+.series,
+.comics,
+.creators {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contents {
+  height: 140vh;
+  background-image: url(./public/images/desktop/bg1.jpg);
+  &__header {
+    background: linear-gradient(
+      rgba(250, 250, 250, 0.3),
+      rgba(250, 250, 250, 0.6)
+    );
+  }
+
+  &__nav {
+    @include d-flex(center, center, row);
+  }
+  &__nav-link {
+    text-transform: uppercase;
+    padding: $padding-m;
+    font-size: $fs-s;
+    transition: all 0.2s ease-in-out;
+  }
+  &__nav-link:hover {
+    color: $secondary-text-color;
+    transform: scale(1.3);
+  }
+  &__logo-wrapper {
+    text-align: center;
+    margin-top: $margin-s;
+  }
+
+  &__logo {
+    width: 350px;
+    height: auto;
+  }
+  &__news-wrapper {
+    @include d-flex(space-between, center, row);
+    margin: $padding-s;
+  }
+  &__news-title {
+    text-transform: uppercase;
+    font-size: $fs-l;
+    margin-left: $margin-l;
+    color: $third-text-color;
+  }
+
+  .seeall {
+    letter-spacing: 0.09em;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding: 10px 10px 8px !important;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    margin-right: $margin-xl;
+    font-family: $ff-primary;
+  }
+  .seeall:hover {
+    background-color: $third-text-color;
+    transition-duration: 300ms;
+    transform: scale(1.1);
+  }
+  .newscard__wrapper {
+    @include d-flex(space-evenly, center, row);
+    color: aliceblue;
+  }
+  .newscard {
+    width: 400px;
+    height: 478px;
+    border-radius: 20px;
+    border: 5px solid #3c271d;
+    border-image: url(./public/images/desktop/borderimage.png);
+    border-image-slice: 100;
+    border-image-width: 100px;
+    border-image-outset: 30px;
+    background-color: #0a141f;
+  }
+  .newscard__zuko {
+    padding: $padding-s;
+    text-align: center;
+    background-image: url(./public/images/desktop/zukonews.jpg);
+    background-position: 50% 8%;
+    width: auto;
+    height: 150px;
+  }
+  .newscard__mako {
+    padding: $padding-s;
+    text-align: center;
+    background-image: url(./public/images/desktop/makocomic.jpg);
+    width: auto;
+    height: 150px;
+  }
+  .newscard__live {
+    padding: $padding-s;
+    text-align: center;
+    background-image: url(./public/images/desktop/bison.webp);
+    width: auto;
+    height: 150px;
+    background-position: 50% 80%;
+  }
+  .newscard-img {
+  }
+  .newscard__title,
+  .newscard__description {
+    text-align: justify;
+    padding: $padding-xs;
+    color: $third-text-color;
+  }
+}
+.series {
+  height: 110vh;
+  background-image: url(./public/images/desktop/bg2.png);
+  @include d-flex(center, center, column);
+  &__title-wrapper {
+    padding: $padding-l;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $fs-xxl;
+    color: $third-text-color;
+    text-align: center;
+  }
+  &__description-wrapper {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid #3c271d;
+    border-image: url(./public/images/desktop/borderimage.png);
+    border-image-slice: 100;
+    border-image-width: 100px;
+    border-image-outset: 30px;
+    background-color: #0a141f;
+  }
+
+  &__description {
+    text-align: justify;
+    padding: $padding-xs;
+    color: $third-text-color;
+  }
+  &__button {
+    letter-spacing: 0.09em;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding: 10px 10px 8px !important;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    margin-right: $margin-xl;
+    font-family: $ff-primary;
+    margin-top: $margin-xxl;
+    font-size: $fs-m;
+  }
+  &__button:hover {
+    background-color: $third-text-color;
+    transition-duration: 300ms;
+    transform: scale(1.1);
+  }
+}
+
+.comics {
+  height: 140vh;
+  background-image: url(./public/images/desktop/bg3.jpg);
+  &__title-wrapper {
+    padding: $padding-l;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $fs-xxl;
+    color: $third-text-color;
+    text-align: center;
+  }
+
+  &__main {
+    @include d-flex(space-around, center, row);
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid #3c271d;
+    border-image: url(./public/images/desktop/borderimage.png);
+    border-image-slice: 100;
+    border-image-width: 100px;
+    border-image-outset: 30px;
+    background-color: $primary-bg;
+  }
+
+  &__img-wrapper {
+  }
+  &__img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+  }
+  &__description {
+    padding: $padding-xs;
+    width: 100%;
+    text-align: justify;
+  }
+  &__publisher {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__table {
+    @include grid-sys(2, 3);
+    height: auto;
+    border-radius: 20px;
+    border: 5px solid #3c271d;
+    border-image: url(./public/images/desktop/borderimage.png);
+    border-image-slice: 100;
+    border-image-width: 100px;
+    border-image-outset: 30px;
+    background-color: $primary-bg;
+  }
+  &__cover {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    padding: $padding-xs;
+  }
+  &__cover-title {
+    text-align: center;
+    letter-spacing: 0.09em;
+    line-height: 1em;
+    text-transform: uppercase;
+    background-color: inherit;
+    color: #000;
+    font-family: $ff-primary;
+    font-size: $fs-s;
+    padding: $padding-xs;
+  }
+  &__cover-title:hover {
+    background-color: $third-text-color;
+    transition-duration: 300ms;
+    transform: scale(1.05);
+  }
+}
+
+.creators {
+  height: 160vh;
+  background-image: url(./public/images/desktop/bg4.jpg);
+  &__title-wrapper {
+    padding: $padding-l;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $fs-xxl;
+    color: $third-text-color;
+    text-align: center;
+  }
+  &__main {
+    @include d-flex(space-evenly, center, row);
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 600px;
+    border-radius: 20px;
+    border: 5px solid #3c271d;
+    border-image: url(./public/images/desktop/borderimage.png);
+    border-image-slice: 100;
+    border-image-width: 100px;
+    border-image-outset: 30px;
+    background-color: $primary-bg;
+    padding: $padding-s;
+  }
+  &__card-title {
+    letter-spacing: 0.09em;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding: 10px 10px 8px !important;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: $primary-bg;
+    color: #000;
+    font-family: $ff-primary;
+  }
+  &__card-title:hover {
+    background-color: $third-text-color;
+    transition-duration: 300ms;
+    transform: scale(1.05);
+  }
+  &__img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    padding: $padding-xs;
+  }
+  &__description {
+    padding: $padding-xs;
+    width: 100%;
+    text-align: justify;
+  }
+}
+
+.footer {
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(./public/images/desktop/footerbg.jpg);
+  &__box {
+    @include d-flex(center, center);
+    padding-top: $padding-l;
+  }
+  &__title {
+    font-size: 3rem;
+    margin-right: 4rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    width: 600px;
+    height: 3rem;
+    border-bottom-width: 4px;
+    border-bottom-color: #000;
+    background-color: inherit;
+    text-align: center;
+  }
+  &__info-wrapper {
+    padding-top: 0.25rem;
+    display: flex;
+  }
+  &__info {
+    width: 65%;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  &__button {
+    letter-spacing: 0.09em;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding: 10px 10px 8px !important;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: $secondary-bg;
+    color: #000;
+    font-family: $ff-primary;
+    margin-left: 80px;
+    margin-bottom: 18px;
+    font-size: $fs-m;
+  }
+  &__button:hover {
+    background-color: $third-text-color;
+    transition-duration: 300ms;
+    transform: scale(1.05);
+  }
+  &__nav {
+    @include d-flex(center, center, row);
+  }
+  &__nav-link {
+    text-transform: uppercase;
+    padding: $padding-m;
+    font-size: $fs-s;
+    transition: all 0.2s ease-in-out;
+  }
+  &__nav-link:hover {
+    color: $secondary-text-color;
+    transform: scale(1.3);
+  }
+  &__messenger {
+    display: flex;
+    justify-content: center;
+  }
+  .messenger {
+    margin-top: 8rem;
+
+    display: flex;
+    justify-content: center;
+  }
+  .messenger__icon {
+    width: 40px;
+  }
+  .messenger__icon:hover {
+    transition-duration: 300ms;
+    transform: scale(1.3);
+  }
+}
+
+@import "./scss/media.scss";
