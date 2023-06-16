@@ -1,6 +1,6 @@
 @import "./scss/variables.scss";
 @import "./scss/mixings.scss";
-
+@import "./scss/keyframes.scss";
 * {
   padding: 0;
   margin: 0;
@@ -36,6 +36,7 @@ a {
 
   &__nav {
     @include d-flex(center, center, row);
+    animation: slide-in 1200ms;
   }
   &__nav-link {
     text-transform: uppercase;
@@ -98,6 +99,11 @@ a {
     border-image-width: 100px;
     border-image-outset: 30px;
     background-color: #0a141f;
+  }
+
+  .newscard:hover {
+    animation: grow-and-shrink 1000ms;
+    animation-timing-function: ease-in-out;
   }
   .newscard__zuko {
     padding: $padding-s;
@@ -251,6 +257,11 @@ a {
     height: auto;
     padding: $padding-xs;
   }
+
+  &__cover:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+  }
   &__cover-title {
     text-align: center;
     letter-spacing: 0.09em;
@@ -403,7 +414,6 @@ a {
   }
   .messenger {
     margin-top: 8rem;
-
     display: flex;
     justify-content: center;
   }
